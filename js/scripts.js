@@ -490,134 +490,6 @@ function initSolonick() {
         }
     });
     $('.cs-wrap .hero-wrap , .nav-holder').perfectScrollbar({});
-    //   Contact form------------------
-    $("#contactform").submit(function () {
-        var a = $(this).attr("action");
-        $("#message").slideUp(750, function () {
-            $("#message").hide();
-            $("#submit").attr("disabled", "disabled");
-            $.post(a, {
-                name: $("#name").val(),
-                email: $("#email").val(),
-                phone: $("#phone").val(),
-                subject: $('#subject').val(),
-                comments: $("#comments").val(),
-                verify: $('#verify').val()
-
-            }, function (a) {
-                document.getElementById("message").innerHTML = a;
-                $("#message").slideDown("slow");
-                $("#submit").removeAttr("disabled");
-                if (null != a.match("success")) $("#contactform").slideDown("slow");
-            });
-        });
-        return false;
-    });
-    $("#contactform input, #contactform textarea").keyup(function () {
-        $("#message").slideUp(1500);
-    });
-    $('.chosen-select').selectbox();
-    //   mailchimp------------------
-    $("#subscribe").ajaxChimp({
-        language: "eng",
-        url: "http//foysal.com"
-    });
-    $.ajaxChimp.translations.eng = {
-        submit: "Submitting...",
-        0: '<i class="fa fa-check"></i> We will be in touch soon!',
-        1: '<i class="fa fa-warning"></i> You must enter a valid e-mail address.',
-        2: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-        3: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-        4: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-        5: '<i class="fa fa-warning"></i> E-mail address is not valid.'
-    };
-    function videoint() {
-        //   Video------------------
-        var v = $(".background-youtube-wrapper").data("vid");
-        var f = $(".background-youtube-wrapper").data("mv");
-        $(".background-youtube-wrapper").YTPlayer({
-            fitToBackground: true,
-            videoId: v,
-            pauseOnScroll: true,
-            mute: f,
-            callback: function () {
-                var a = $(".background-youtube-wrapper").data("ytPlayer").player;
-            }
-        });
-        var w = $(".background-vimeo").data("vim"),
-            bvc = $(".background-vimeo"),
-            bvmc = $(".media-container"),
-            bvfc = $(".background-vimeo iframe "),
-            vch = $(".video-container");
-        bvc.append('<iframe src="//player.vimeo.com/video/' + w + '?background=1"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>');
-        $(".video-holder").height(bvmc.height());
-        if ($(window).width() > 1024) {
-            if ($(".video-holder").size() > 0)
-                if (bvmc.height() / 9 * 16 > bvmc.width()) {
-                    bvfc.height(bvmc.height()).width(bvmc.height() / 9 * 16);
-                    bvfc.css({
-                        "margin-left": -1 * $("iframe").width() / 2 + "px",
-                        top: "-75px",
-                        "margin-top": "0px"
-                    });
-                } else {
-                    bvfc.width($(window).width()).height($(window).width() / 16 * 9);
-                    bvfc.css({
-                        "margin-left": -1 * $("iframe").width() / 2 + "px",
-                        "margin-top": -1 * $("iframe").height() / 2 + "px",
-                        top: "50%"
-                    });
-                }
-        } else if ($(window).width() < 760) {
-            $(".video-holder").height(bvmc.height());
-            bvfc.height(bvmc.height());
-        } else {
-            $(".video-holder").height(bvmc.height());
-            bvfc.height(bvmc.height());
-        }
-        vch.css("width", $(window).width() + "px");
-        vch.css("height", Number(720 / 1280 * $(window).width()) + "px");
-        if (vch.height() < $(window).height()) {
-            vch.css("height", $(window).height() + "px");
-            vch.css("width", Number(1280 / 720 * $(window).height()) + "px");
-        }
-    }
-    videoint();
-    // Share   ------------------
-    $(".share-container").share({
-        networks: ['facebook', 'pinterest', 'googleplus', 'twitter', 'linkedin']
-    });
-    var shrcn = $(".share-wrapper"),
-        ssb = $(".showshare");
-    function showShare() {
-        hideMenu();
-        shrcn.fadeIn(1).removeClass("isShare").addClass("invis-share");
-        $(".share-title span").shuffleLetters({});
-        ssb.addClass("clshbt");
-        setTimeout(function () {
-            $(".soa").each(function (a) {
-                var b = $(this);
-                setTimeout(function () {
-                    b.addClass("soavis")
-                }, 150 * a);
-            });
-
-        }, 300);
-    }
-    function hideShare() {
-        shrcn.fadeOut(400).addClass("isShare").removeClass("invis-share");
-        $(".soa").removeClass("soavis");
-        ssb.removeClass("clshbt");
-    }
-    $(".close-share").on("click", function () {
-        hideShare();
-    });
-    ssb.on("click", function () {
-
-        if (shrcn.hasClass("isShare")) showShare();
-        else hideShare();
-        return false;
-    });
     //   menu ------------------
     $("#menu").menu();
     $(".sliding-menu li a.nav").parent("li").addClass("submen-dec");
@@ -625,7 +497,6 @@ function initSolonick() {
         nhw = $(".nav-holder"),
         nho = $(".nav-overlay");
     function showMenu() {
-        hideShare();
         nho.fadeIn(500);
         nhw.animate({
             left: "0",
@@ -705,14 +576,6 @@ function initSolonick() {
     $window.resize(function () {
         csselem();
     });
-    // Counter ------------------
-    if ($(".counter-widget").length > 0) {
-        var countCurrent = $(".counter-widget").attr("data-countDate");
-        $(".countdown").downCount({
-            date: countCurrent,
-            offset: 0
-        });
-    }
     //   scroll to------------------
     $(".custom-scroll-link").on("click", function () {
         var a = 80;
@@ -803,78 +666,6 @@ function initparallax() {
         },
         error: function (data) {
             console.log(data);
-        }
-    });
-    //   audio player ------------------
-    if ($(".audio-player-wrap").length > 0) {
-        function initAudiolist() {
-            audiojs.events.ready(function () {
-                var a = audiojs.createAll({
-                        trackEnded: function () {
-                            var next = $('.audio-player-wrap ol li.playing').next();
-                            if (!next.length) next = $('.audio-player-wrap ol li').first();
-                            next.addClass('playing').siblings().removeClass('playing');
-                            audio.load($('a.audio-link', next).attr('data-srcaudio'));
-                            audio.play();
-                        }
-                    }),
-                    audio = a[0],
-                    ids = ['vol-0', 'vol-40', 'vol-70', 'vol-100'];
-                for (var i = 0, ii = ids.length; i < ii; i++) {
-                    var elem = document.getElementById(ids[i]),
-                        volume = ids[i].split('-')[1];
-                    elem.setAttribute('data-volume', volume / 100)
-                    elem.onclick = function (e) {
-                        audio.setVolume(this.getAttribute('data-volume'));
-                        e.preventDefault();
-                        return false;
-                    }
-                }
-                var audio = a[0];
-                first = $('.audio-player-wrap ol a.audio-link').attr('data-srcaudio');
-                $('.audio-player-wrap ul li').first().addClass('playing');
-                audio.load(first);
-                $('.audio-player-wrap ol li a.audio-link').on("click", function (e) {
-                    e.preventDefault();
-                    if ($(this).parent("li").attr('class') === 'playing') {
-                        $(this).parent("li").addClass('pause');
-                        audio.playPause();
-                    } else {
-                        $(this).parent("li").removeClass('pause').addClass('playing').siblings().removeClass('playing').removeClass('pause');
-                        audio.load($(this).attr('data-srcaudio'));
-                        audio.play();
-                    }
-                });
-            });
-        }
-        initAudiolist();
-        $('.volume-control span').on('click', function () {
-            $('.volume-control span').removeClass("allvolumne");
-            var onStar = Number($(this).data('value'));
-            var stars = $(this).parent().children('span');
-            for (i = 0; i < stars.length; i++) {
-                $(stars[i]).removeClass('selected');
-            }
-            for (i = 0; i < onStar; i++) {
-                $(stars[i]).addClass('selected');
-            }
-            if ($(this).data("value") === 1) {
-                $(this).addClass('allvolumne');
-            }
-        });
-        var alblisttitle = $(".playlist-wrap ol").data("listalbumtitle");
-        $(".album-list-title").text("(" + alblisttitle + ")");
-    }
-    var audprev = $("#preview-sound");
-    $('.album-preview').on({
-        mouseenter: function () {
-            var audioprevpath = $(this).data("audiopath");
-            audprev.attr("src", audioprevpath);
-            audprev[0].play();
-        },
-        mouseleave: function () {
-            audprev[0].pause();
-            audprev[0].currentTime = 0;
         }
     });
 //   Init All ------------------
