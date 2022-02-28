@@ -93,7 +93,7 @@
 .fs-carousel-link:hover,
 .lg-actions .lg-next:hover,
 .lg-actions .lg-prev:hover {
-    color: #FAC921
+  color: #ff1900;
 }
 
 .color-bg,
@@ -146,9 +146,9 @@
 .about-widget h5:after,
 .serv-works-item .hidden-works-item-text h3:before,
 .main-about h2:before {
-    background: #FAC921
+  background: #ff1900;
 }
 
 #twitts-container ul li:hover .timePosted a:after {
-    border-top-color: #FAC921;
+  border-top-color: #ff1900;
 }
