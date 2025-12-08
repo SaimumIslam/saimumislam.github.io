@@ -20,5 +20,19 @@ const about = {
     external: "https://tinyurl.com/MdTaquiImam",
     github: "https://github.com/taqui-786", // Assuming this is the GitHub link
   },
+  skills: [
+    {
+      name: "React",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      name: "TypeScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+      name: "Python",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    },
+  ],
 };
 export default about;

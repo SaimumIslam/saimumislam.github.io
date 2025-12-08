@@ -13,7 +13,7 @@ const ThemeToggle = () => {
       <ThemeToggleButton
         theme={newMode}
         setTheme={setTheme}
-        className="absolute bottom-2 right-2"
+        className="fixed bottom-2 right-2"
       />
     </>
   );
