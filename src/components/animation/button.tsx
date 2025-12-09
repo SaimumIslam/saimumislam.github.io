@@ -33,16 +33,16 @@ const HackerBtn = ({ label }: { label: string }) => {
   }, [label]);
 
   return (
-    <div>
+    <a download href="/saimum_academic.pdf">
       <Button
         size="lg"
-        className="text-base px-5 py-5"
+        className="text-base px-5 py-5 cursor-pointer"
         onMouseEnter={startScrambling}
       >
         <Download className="mx-1" />
         {displayText}
       </Button>
-    </div>
+    </a>
   );
 };
 

@@ -30,14 +30,14 @@ const SocialLinks = () => {
       icon: <Linkedin />,
     },
     {
-      name: "External",
-      link: ABOUT.socialLinks.external,
-      icon: <ExternalLink />,
-    },
-    {
       name: "Github",
       link: ABOUT.socialLinks.github,
       icon: <Github />,
+    },
+    {
+      name: "Medium",
+      link: ABOUT.socialLinks.medium,
+      icon: <ExternalLink />,
     },
   ];
   return (

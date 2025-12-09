@@ -75,14 +75,14 @@ const Marquee = (props: Props) => {
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 overflow-hidden mask-[linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller max-w-xs relative z-20 overflow-hidden mask-[linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "grid grid-cols-7 gap-2",
+          "flex flex-row gap-4",
           start && "animate-scroll",
           pauseOnHover && "hover:paused"
         )}

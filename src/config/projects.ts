@@ -1,53 +1,107 @@
 const projects = [
   {
-    title: "WePost- A modern, minimalistic social platform.",
+    title: "RetailFlow – Full-featured web-based shop management system",
+    period: "Mar 2025 – September 2025",
+    platform: "Web",
     description:
-      "WePost is a modern, minimalistic social platform for sharing posts, like, follow, and engaging in comments etc.",
-    technologies: ["Tanstack-Query", "PostgreSQL", "Shadcn Ui", "Nextjs"],
-    link: "https://we-post-dev.vercel.app",
+      "Built a full-featured shop management system enabling users to manage products, pricing, invoices, customers, and stock across multiple outlets. Includes dynamic invoice generation, PDF export, reporting, and real-time stock updates.",
+    technologies: ["React.js", "Django REST", "Typescript", "MySQL"],
+    link: "https://retailflow.faithdevs.com/",
   },
   {
-    title: "Devzone- A community chat app for devs",
+    title: "Mosque Finder – Ultimate Islamic companion app",
+    period: "Dec 2024 – Apr 2025",
+    platform: "Android",
     description:
-      "DevZone is the ultimate chat platform for developers to connect, collaborate, and code together. Join the conversation and level up your coding journey.",
-    technologies: ["Zustand", "Supabase", "Shadcn Ui", "Nextjs"],
-    link: "https://devzone-ti.vercel.app/",
+      "Mosque Finder helps Muslims stay spiritually connected by locating nearby mosques, providing accurate prayer times, Qibla direction, Hijri calendar, Quran recitation, Hadith collection, and a Zakat calculator. Advanced GPS, reverse geocoding, and interactive features ensure a seamless experience.",
+    technologies: [
+      "Koa.js",
+      "React Native",
+      "Typescript",
+      "MongoDB",
+      "GPS APIs",
+    ],
+    link: "https://play.google.com/store/apps/details?id=com.saimum.mosque-finder",
+  },
+
+  {
+    title: "BRTA Guide – Mobile app for driving license & vehicle services",
+    period: "Oct 2024 – Dec 2024",
+    platform: "Android",
+    description:
+      "Developed a mobile application to assist users in Bangladesh with driving license preparation, renewals, and vehicle registration. Built frontend with React Native, backend with Koa.js and MongoDB, including server deployment via Nginx and structured government data.",
+    technologies: ["Koa.js", "React Native", "Typescript", "MongoDB"],
+    link: "https://play.google.com/store/apps/details?id=com.saimum.brtaguide",
   },
   {
-    title: "itZmyLink- One Page many Links",
+    title: "KULemma – Towards a Comprehensive Bangla Lemmatizer",
+    period: "Jan 2023 - Feb 2024",
+    platform: "Research / NLP",
     description:
-      "itZmyLink is a simple platform where user can create a personalized page to showcase all your social media profiles in one place. ",
-    technologies: ["Nextjs", "Typescript", "Shadcn Ui"],
-    link: "https://github.com/taqui-786/itZmyLink",
+      "Developed KULemma, a Bangla lemmatizer using a curated dataset of 297,000 words, 50,000 synonyms, and 10,000 antonyms. Implements Trie, LSSRA, and Levenshtein Distance algorithms with POS tagging and language-specific stemming rules, achieving 96.90% accuracy for morphological analysis and NLP applications.",
+    technologies: [
+      "Python",
+      "NLP",
+      "Trie",
+      "Levenshtein Distance",
+      "POS Tagging",
+    ],
+    link: "https://www.researchgate.net/publication/442365989_KULemma_Towards_a_Comprehensive_Bangla_Lemmatizer",
+  },
+
+  {
+    title: "BNNet – Towards a Comprehensive Bangla WordNet",
+    period: "Jan 2019 - Jan 2020",
+    platform: "Research / NLP / Web",
+    description:
+      "Compiled a large-scale bilingual lexical resource with 247,748 English-to-Bangla and 205,344 Bangla-to-English mappings, including 75,000 Bangla and 66,000 English synonyms. Mapped 111,095 words from Princeton WordNet and developed RESTful APIs, interactive interfaces, and a semantic similarity checker for practical use.",
+    technologies: ["Python", "NLP", "REST API", "WordNet", "Web Development"],
+    link: "https://www.researchgate.net/publication/350123456_BNNet_Towards_A_Comprehensive_Bangla_WordNet",
   },
   {
-    title: "GitEstimate- Github estimate worth generator",
+    title: "Forkify – Learning project using JavaScript",
+    period: "Aug 2019 – Dec 2019",
+    platform: "Web",
     description:
-      "GitEstimate is a simple fun tool where user can generate their github estimate worth card just by entering their github username. ",
-    technologies: ["Nextjs", "Typescript", "Shadcn Ui"],
-    link: "https://github.com/taqui-786/GitEstimate",
+      "A learning project using ingredients API to show cooking processes and calculate ingredients for different family sizes.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Webpack"],
+    link: "https://github.com/Saimumislam/Javascript-projects/tree/master/Forkify",
   },
   {
-    title: "Mixcn-ui- Reusable components for Nextjs",
+    title: "Digital Phonebook – Android & iOS utility app",
+    period: "Apr 2019 – Oct 2019",
+    platform: "Android",
     description:
-      "This is Nextjs app with a Collection of Nextjs Components - (Currently under Devlelopment) ",
-    technologies: ["Nextjs", "Shadcnui", "Npx", "Library"],
-    link: "https://mixcn-ui.vercel.app",
+      "A phonebook app with departmental contacts, group messaging, sticky notes, alarms, and direct call/email integration.",
+    technologies: ["Flutter", "CSV", "Firebase"],
+    link: "Confidential",
   },
   {
-    title: "Rupeespot- All deals Product in one place",
+    title: "University Result and Registration System – Academic automation",
+    period: "May 2018 – Nov 2018",
+    platform: "Web",
     description:
-      "This is a free tool to check price history charts for millions of products for popular Indian stores such as Amazon and Flipkart. ",
-    technologies: ["Nextjs", "Freelancing", "MySQL"],
-    link: "https://rupeespot.com/",
+      "Automated student result processing, course registration, progress reports, and contact with teachers.",
+    technologies: ["Python", "PHP", "HTML", "CSS", "JavaScript"],
+    link: "Confidential",
   },
   {
-    title: "Formcraft- Build Type-Safe Forms with Zero Effort",
+    title: "Diabetic Patient Helper – Android health app",
+    period: "Sep 2017 – Mar 2018",
+    platform: "Android",
     description:
-      "Create production-ready forms with Zod validation, React Hook Form, and TypeScript. Design, customize, and deploy in minutes.",
-    technologies: ["Nextjs", "Shadcnui", "Zod", "React Hook Form "],
-    link: "https://formcraft-ti.vercel.app/",
+      "App to track food, medicine, exercise, blood pressure, and weight, with reminders, notifications, and automated advice for diabetic patients.",
+    technologies: ["Java", "SQLite"],
+    link: "https://github.com/SaimumIslam/Diabetes-care",
+  },
+  {
+    title: "Notice Board – Android academic app",
+    period: "Mar 2017 – Nov 2017",
+    platform: "Android",
+    description:
+      "Application for authentication, role-based authorization, notice creation/approval/distribution, and subscription. Provides experience in database design, SQL, PHP, and REST API development.",
+    technologies: ["Android", "Java", "PHP", "MySQL"],
+    link: "https://github.com/SaimumIslam/CSEKU_SDP_2017_Notice_Board",
   },
 ];
-
 export default projects;

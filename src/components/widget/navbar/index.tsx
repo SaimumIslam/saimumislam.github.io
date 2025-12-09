@@ -1,4 +1,4 @@
-import { FolderGit2, GraduationCap, HomeIcon, Mail, User } from "lucide-react";
+import { FolderGit2, Cable, HomeIcon, Signature, User } from "lucide-react";
 
 import {
   Dock,
@@ -14,25 +14,18 @@ const data = [
     href: "/",
   },
   {
-    title: "About",
-    icon: <User className="h-full w-full " />,
-    href: "/about",
+    title: "My Journey",
+    icon: <Cable className="h-full w-full " />,
+    href: "/journey",
   },
   {
-    title: "Experince",
-    icon: <GraduationCap className="h-full w-full " />,
-    href: "/experience",
-  },
-
-  {
-    title: "Projects",
+    title: "Personal Projects",
     icon: <FolderGit2 className="h-full w-full " />,
     href: "/projects",
   },
-
   {
-    title: "Contact us",
-    icon: <Mail className="h-full w-full " />,
+    title: "Contact",
+    icon: <Signature className="h-full w-full " />,
     href: "/contact",
   },
 ];

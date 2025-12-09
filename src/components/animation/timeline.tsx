@@ -4,9 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface Timeline {
-  title: string;
+  institute: string;
+  position: string;
   time: string;
-  content: React.ReactNode;
+  points: string[];
 }
 
 interface Props {
@@ -59,16 +60,23 @@ export const Timeline = ({ title, description, items }: Props) => {
                 <div className="h-2 w-2 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <div className="hidden md:pl-20 md:block">
-                <h3 className="text-lg font-bold">{item.title}</h3>
+                <h3 className="text-lg font-bold">{item.institute}</h3>
                 <span className="text-sm">{item.time}</span>
               </div>
             </div>
             {/* mobile */}
             <div className="relative pl-20 pr-4 md:pl-2 w-full">
               <h3 className="md:hidden block text-xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
-                {item.title}
+                {item.institute}
               </h3>
-              {item.content}
+              <div className="flex flex-col gap-2">
+                <h3 className="text-md font-bold">{item.position}</h3>
+                <ul className="flex flex-col gap-1 text-sm">
+                  {item.points.map((pt) => (
+                    <li key={pt}>{pt}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         ))}
