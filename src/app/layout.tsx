@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   title: SITE.title,
   description: SITE.title,
   keywords: SITE.keywords,
-  authors: SITE.authors,
+  authors: SITE.author,
 };
 
 export default function RootLayout({

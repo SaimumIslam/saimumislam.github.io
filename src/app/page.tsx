@@ -7,7 +7,7 @@ import TechStackSection from "./_sections/tech-stack";
 import ProjectsSection from "./_sections/project";
 import ExperienceSection from "./_sections/experience";
 import EducationSection from "./_sections/education";
-import FreelanceSection from "./_sections/freelance";
+import PublicationSection from "./_sections/publication";
 
 import FooterSection from "./_sections/footer";
 import BioSection from "./_sections/biography";
@@ -34,7 +34,7 @@ export default function Home() {
       <ProjectsSection />
       <SectionSeparator className="full-line-bottom" />
       <ExperienceSection />
-      <FreelanceSection />
+      <PublicationSection />
       <EducationSection />
       <SectionSeparator className="full-line-bottom" />
       <ContactMeSection />

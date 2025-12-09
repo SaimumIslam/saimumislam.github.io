@@ -36,6 +36,7 @@ function LandingAnimation({
       clearTimeout(timer2);
     };
   }, []);
+
   return (
     <>
       <Header transition={transition} />

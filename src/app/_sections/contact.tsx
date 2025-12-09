@@ -110,7 +110,7 @@ function ContactMeSection() {
                         <div className="relative">
                           <Input
                             className="peer ps-9 pe-9 font-mono"
-                            placeholder="Md Taqui Imam"
+                            placeholder="Saimum"
                             type="text"
                             {...field}
                           />
@@ -134,7 +134,7 @@ function ContactMeSection() {
                         <div className="relative">
                           <Input
                             className="peer ps-9 pe-9 font-mono"
-                            placeholder="mdtaqui.jhar@gmail.com"
+                            placeholder="saimum@gmail.com"
                             type="text"
                             {...field}
                           />

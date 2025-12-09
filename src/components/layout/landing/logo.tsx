@@ -47,7 +47,7 @@ const AnimatedLogo = ({
           className
         )}
       >
-        Portfolio
+        Saimum
       </motion.h1>
     </div>
   );

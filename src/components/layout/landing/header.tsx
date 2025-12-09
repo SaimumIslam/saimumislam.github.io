@@ -5,11 +5,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { buttonVariants } from "@/components/ui/button";
+import DownloadButton from "@/components/animation/download-btn";
 
 import AnimatedLogo from "./logo";
 import HeaderClient from "./header-client";
-
-import ThemeSwitcher from "../theme-switcher";
 
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/useMobile";
@@ -109,17 +108,7 @@ const Header: React.FC<HeaderProps> = ({ transition }) => {
             className="absolute z-110 flex items-center gap-x-4"
           >
             <div className="flex gap-3 items-center justify-center">
-              <Link
-                href="https://github.com/taqui-786"
-                target="_blank"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "icon" }),
-                  "rounded-full"
-                )}
-              >
-                <GithubIcon />
-              </Link>
-              <ThemeSwitcher />
+              <DownloadButton />
             </div>
           </motion.div>
         </div>

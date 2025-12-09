@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import SITE from "@/config/site";
 
 function FooterSection() {
   return (
@@ -21,28 +21,15 @@ function FooterSection() {
         )}
       />
       <p className="mb-1 text-center font-mono text-sm text-balance text-muted-foreground">
-        Inspired by tailwindcss.com &amp;&amp; @iamncdai
-      </p>
-      <p className=" text-center font-mono text-sm text-balance text-muted-foreground">
-        Built by{" "}
+        All rights protected by{" "}
         <a
           className="font-semibold underline"
-          href="https://mdtaquiimam.vercel.app/"
+          href={SITE.author.url}
           target="_blank"
           rel="noopener"
         >
-          Md Taqui Imam
+          {SITE.author.name}
         </a>
-        . The source code is available on{" "}
-        <a
-          className="font-semibold underline"
-          href="https://github.com/taqui-786/Taqui"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
-        .
       </p>
     </section>
   );

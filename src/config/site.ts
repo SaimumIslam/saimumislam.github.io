@@ -18,12 +18,10 @@ const SITE = {
     "django",
   ],
   lastUpdatedAt: "2025-12-07",
-  authors: [
-    {
-      name: "Saimum",
-      url: "https://github.com/taqui-786",
-    },
-  ],
+  author: {
+    name: "Saimum",
+    url: "https://www.linkedin.com/in/saimum27/",
+  },
 };
 
 export default SITE;

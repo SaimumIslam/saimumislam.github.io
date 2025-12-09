@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Download } from "lucide-react";
 import { Button } from "../ui/button";
 
-const HackerBtn = ({ label }: { label: string }) => {
+const DownloadButton = ({ label = "Download Resume" }: { label?: string }) => {
   const [displayText, setDisplayText] = useState(label);
   const charset = "abcdefghijklmnopqrstuvwxyz";
 
@@ -35,8 +35,9 @@ const HackerBtn = ({ label }: { label: string }) => {
   return (
     <a download href="/saimum_academic.pdf">
       <Button
-        size="lg"
-        className="text-base px-5 py-5 cursor-pointer"
+        size="sm"
+        variant="outline"
+        className="text-base cursor-pointer"
         onMouseEnter={startScrambling}
       >
         <Download className="mx-1" />
@@ -46,4 +47,4 @@ const HackerBtn = ({ label }: { label: string }) => {
   );
 };
 
-export { HackerBtn };
+export default DownloadButton;
