@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
+import {
+  IBM_Plex_Mono as FontMono,
+  IBM_Plex_Sans as FontSans,
+} from "next/font/google";
+
 import ThemeProvider from "@/providers/theme";
-import Navbar from "@/components/widget/navbar";
-import ThemeSwitcher from "@/components/widget/theme-switcher";
+import ThemeSwitcher from "@/components/layout/theme-switcher";
 
 import SITE from "@/config/site";
 
@@ -11,14 +15,18 @@ import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontSans = FontSans({
+  weight: ["400", "500", "600"],
+  display: "swap",
   subsets: ["latin"],
+  variable: "--cd-font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontMono = FontMono({
+  weight: ["400", "500", "600"],
+  display: "swap",
   subsets: ["latin"],
+  variable: "--cd-font-mono",
 });
 
 export const metadata: Metadata = {
@@ -35,16 +43,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          `${geistSans.variable} ${geistMono.variable} antialiased`,
-          "xl:container xl:mx-auto m-10"
-        )}
-      >
+      <body className={`${fontSans.variable} ${fontMono.variable} `}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
           {children}
-          <ThemeSwitcher />
+          <ThemeSwitcher className="fixed bottom-2 right-2" />
         </ThemeProvider>
       </body>
     </html>

@@ -1,18 +1,27 @@
 const about = {
   name: "Saimum Islam",
-  role: "Software Engineer",
+  currentRole: "Senior Software Engineer",
+  currentCompany: "Jukto Digital",
   location: "Khulna, Bangladesh",
   mobile: "+8801763706245",
-  bio: "Full-stack engineer experienced in React, React Native, DRF, and Koa.js, specializing in scalable LMS solutions. Published in NLP and passionate about AI and machine learning, with a strong drive for continuous learning and advanced study.",
-  hobbies: [
-    "Coding",
-    "Playing Games",
-    "Watching Anime",
-    "Tech Blog Writing",
-    "Creating Cool Projects",
+  email: "saimumislam27@gmail.com", // Replace with actual email if available
+
+  introduction:
+    "Full-stack engineer experienced in React, React Native, DRF, and Koa.js, specializing in scalable LMS solutions. Published in NLP and passionate about AI and machine learning, with a strong drive for continuous learning and advanced study.",
+  sentences: [
+    "Full-stack software engineer building scalable digital solutions.",
+    "Research-driven developer with experience in ML and NLP.",
+    "Competitive programmer turned industry-focused engineer.",
+    "Creator of impactful personal and academic projects.",
+  ],
+  descriptions: [
+    "Hi there! I’m Saimum Islam — a full-stack software engineer with a strong foundation in computer science and over five years of experience delivering scalable, user-focused digital solutions.",
+    "I specialize in JavaScript, TypeScript, React, Next.js, React Native, Django REST, and Koa.js, along with modern tools like Tailwind CSS, Shadcn UI, and Material UI to build clean and intuitive interfaces.",
+    "My journey began through competitive programming and formal education in CSE, later expanding into industry-grade engineering and academic research in machine learning and natural language processing.",
+    "Beyond engineering, I enjoy exploring AI in education, writing technical content, and developing projects that combine research insights with real-world impact.",
+    "Always open to collaboration — let’s build something meaningful together.",
   ],
   socialLinks: {
-    email: "saimumislam27@gmail.com", // Replace with actual email if available
     facebook: "https://www.facebook.com/foysal.1627",
     twitter: "https://twitter.com/SaimumIslam20",
     linkedin: "https://www.linkedin.com/in/saimum27/",

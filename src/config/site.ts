@@ -17,6 +17,7 @@ const SITE = {
     "fullstack",
     "django",
   ],
+  lastUpdatedAt: "2025-12-07",
   authors: [
     {
       name: "Saimum",

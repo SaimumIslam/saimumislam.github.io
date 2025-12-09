@@ -1,32 +1,46 @@
-import Image from "next/image";
+import { SectionSeparator } from "@/components/ui/separator";
+import LandingAnimation from "@/components/layout/landing";
 
-import { HeroText, SocialLinks } from "@/components/section/home";
-import { HackerBtn } from "@/components/animation/button";
-import Marquee from "@/components/animation/marquee";
+import AboutSection from "./_sections/about";
+import ProfileSection from "./_sections/profile";
+import TechStackSection from "./_sections/tech-stack";
+import ProjectsSection from "./_sections/project";
+import ExperienceSection from "./_sections/experience";
+import EducationSection from "./_sections/education";
+import FreelanceSection from "./_sections/freelance";
 
-import ABOUT from "@/config/about";
+import FooterSection from "./_sections/footer";
+import BioSection from "./_sections/biography";
+import SocialLinkSection from "./_sections/social-link";
+import TopSection from "./_sections/top";
+import ContactMeSection from "./_sections/contact";
 
 export default function Home() {
   return (
-    <section className="flex gap-2 justify-between">
-      <aside className="flex flex-col gap-10">
-        <HeroText />
-        <HackerBtn label="Download Resume" />
-        <SocialLinks />
-        <p className="max-w-xl">{ABOUT.bio}</p>
-        <Marquee items={ABOUT.skills} direction="right" speed="slow" />
-      </aside>
-      <aside className="flex flex-col gap-10">
-        <Image
-          className="rounded-xs"
-          src="/profile.jpg"
-          alt="profile"
-          loading="eager"
-          width={400}
-          height={400}
-          priority
-        />
-      </aside>
-    </section>
+    <LandingAnimation>
+      <TopSection />
+
+      <ProfileSection />
+      <SectionSeparator className="full-line-bottom" />
+
+      <BioSection />
+      <SectionSeparator className="" />
+      <SocialLinkSection />
+      <SectionSeparator className="full-line-bottom" />
+      <AboutSection />
+      <SectionSeparator className="full-line-bottom" />
+      <TechStackSection />
+      <SectionSeparator className="full-line-bottom" />
+      <ProjectsSection />
+      <SectionSeparator className="full-line-bottom" />
+      <ExperienceSection />
+      <FreelanceSection />
+      <EducationSection />
+      <SectionSeparator className="full-line-bottom" />
+      <ContactMeSection />
+      <SectionSeparator className="full-line-bottom" />
+      <FooterSection />
+      <SectionSeparator className="full-line-bottom" />
+    </LandingAnimation>
   );
 }

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -16,6 +17,7 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
+  --color-edge: var(--cd-edge);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
@@ -41,7 +43,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
 }
 
 :root {
@@ -77,6 +78,7 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --cd-edge: color-mix(in oklab, var(--border) 64%, var(--background));
 }
 
 .dark {
@@ -111,20 +113,61 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+  --cd-border: oklch(0.274 0.006 286.033);
+
 }
 
 @layer base {
-  * {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
     @apply border-border outline-ring/50;
   }
 
+  html {
+    @apply motion-safe:scroll-smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply overflow-x-hidden bg-background font-sans text-foreground antialiased relative max-w-screen;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Custom scrollbar styling. Thanks @shadcn-ui */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--cd-border);
+    border-radius: 5px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cd-border) transparent;
+  }
+
+  [id] {
+    @apply scroll-mt-22;
   }
 }
 
-@keyframes scroll {
-  to {
-    transform: translate(calc(-50% - 0.5rem));
+@layer utilities {
+  .full-line-top::before {
+    @apply content-[''] absolute top-0 left-full -translate-x-1/2 w-[200vw] h-px bg-border;
   }
+
+  .full-line-bottom::after {
+    @apply content-[''] absolute bottom-0 left-full -translate-x-1/2 w-[200vw] h-px bg-border;
+  }
+
 }

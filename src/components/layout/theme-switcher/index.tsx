@@ -4,7 +4,11 @@ import { useTheme } from "next-themes";
 
 import ThemeToggleButton from "./toggle-btn";
 
-const ThemeToggle = () => {
+interface Props {
+  className?: string;
+}
+
+const ThemeSwither = ({ className }: Props) => {
   const { theme, setTheme } = useTheme();
   const newMode = theme === "dark" ? "light" : "dark";
 
@@ -13,9 +17,9 @@ const ThemeToggle = () => {
       <ThemeToggleButton
         theme={newMode}
         setTheme={setTheme}
-        className="fixed bottom-2 right-2"
+        className={className}
       />
     </>
   );
 };
-export default ThemeToggle;
+export default ThemeSwither;
