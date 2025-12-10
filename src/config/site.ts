@@ -20,7 +20,7 @@ const SITE = {
   authors: [
     {
       name: "Saimum",
-      url: "https://github.com/taqui-786",
+      url: "https://github.com/saimum-786",
     },
   ],
 };
