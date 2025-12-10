@@ -16,11 +16,14 @@ jobs:
         with:
           fetch-depth: 0 # Required to push to master
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build Next.js App
-        run: npm run build
+        run: pnpm build
 
       - name: Prepare output folder
         run: |
