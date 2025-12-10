@@ -1,7 +1,13 @@
 "use client";
 import React, { useState } from "react";
 
-import { ArrowUpRight, ChevronDown, ChevronUp, FolderGit2 } from "lucide-react";
+import {
+  ArrowUpRight,
+  ChevronDown,
+  ChevronUp,
+  FolderGit2,
+  Lightbulb,
+} from "lucide-react";
 
 import {
   Accordion,
@@ -21,11 +27,11 @@ function ProjectSection() {
   };
   const filteredProjects = showMore ? PROJECTS : PROJECTS.slice(0, 4);
   return (
-    <section className=" border-x full-line-bottom relative">
-      <h2 className="pl-4 text-3xl font-semibold relative full-line-bottom ">
-        Projects{" "}
+    <section className="border-x full-line-bottom relative">
+      <h2 className="pl-4 text-2xl font-semibold relative full-line-bottom ">
+        Projects
       </h2>
-      <div className="">
+      <div>
         {filteredProjects.map((project, index) => (
           <Accordion
             type="single"
@@ -37,7 +43,7 @@ function ProjectSection() {
             <AccordionItem value={`project-${project.id}`}>
               <AccordionTrigger aria-label={project.createdAt}>
                 <div className="flex items-center justify-between p-4 h-full w-fit ">
-                  <div className="  size-6 shrink-0">
+                  <div className="size-5 shrink-0">
                     <FolderGit2 />
                   </div>
                 </div>

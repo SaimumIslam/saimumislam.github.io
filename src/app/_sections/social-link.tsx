@@ -6,7 +6,10 @@ import {
   Twitter,
   Github,
   ExternalLink,
+  Link,
 } from "lucide-react";
+
+import { MediumIcon, ResearchGateIcon } from "@/components/icons";
 
 import { cn } from "@/lib/utils";
 
@@ -15,9 +18,9 @@ import ABOUT from "@/config/about";
 function SocialLinkSection() {
   const socialLinks = [
     {
-      name: "Twitter",
-      icon: <Twitter />,
-      href: ABOUT.socialLinks.twitter,
+      name: "GitHub",
+      icon: <Github />,
+      href: ABOUT.socialLinks.github,
     },
 
     {
@@ -26,14 +29,14 @@ function SocialLinkSection() {
       href: ABOUT.socialLinks.linkedin,
     },
     {
-      name: "GitHub",
-      icon: <Github />,
-      href: ABOUT.socialLinks.github,
+      name: "Medium",
+      icon: <MediumIcon />,
+      href: ABOUT.socialLinks.medium,
     },
     {
-      name: "Medium",
-      icon: <ExternalLink />,
-      href: ABOUT.socialLinks.medium,
+      name: "Researchgate",
+      icon: <ResearchGateIcon />,
+      href: ABOUT.socialLinks.researchgate,
     },
   ];
   return (

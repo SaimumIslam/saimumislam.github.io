@@ -8,6 +8,7 @@ import {
 
 import ThemeProvider from "@/providers/theme";
 import ThemeSwitcher from "@/components/layout/theme-switcher";
+import Landing from "@/components/layout/landing";
 
 import SITE from "@/config/site";
 
@@ -45,7 +46,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} ${fontMono.variable} `}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <Landing>{children}</Landing>
           <ThemeSwitcher className="fixed bottom-2 right-2" />
         </ThemeProvider>
       </body>

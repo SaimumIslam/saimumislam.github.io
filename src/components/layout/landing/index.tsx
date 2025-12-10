@@ -29,8 +29,8 @@ function LandingAnimation({
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setTransition(true), 2000);
-    const timer2 = setTimeout(() => setIsLoaded(true), 3000);
+    const timer = setTimeout(() => setTransition(true), 500);
+    const timer2 = setTimeout(() => setIsLoaded(true), 1000);
     return () => {
       clearTimeout(timer);
       clearTimeout(timer2);

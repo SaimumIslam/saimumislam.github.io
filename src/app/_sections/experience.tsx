@@ -15,7 +15,7 @@ function ExperienceSection() {
   const [openItem, setOpenItem] = useState("experience-1");
   return (
     <section className=" border-x  full-line-bottom relative">
-      <h2 className=" text-3xl pl-4 font-semibold relative full-line-bottom">
+      <h2 className=" text-2xl pl-4 font-semibold relative full-line-bottom">
         Experience
       </h2>
       <div className=" full-line-bottom relative ">

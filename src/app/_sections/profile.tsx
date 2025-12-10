@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-import { VerifiedFilledIcon } from "@/components/icons";
+import { BadgeCheck } from "lucide-react";
+
 import FlipSentences from "@/components/animation/flip-sentence";
 
 import ABOUT from "@/config/about";
@@ -14,7 +15,7 @@ function ProfileSection() {
     <section className="relative flex full-line-bottom h-auto border-x  ">
       <div className="shrink-0 border-r p-1">
         <Image
-          className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
+          className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none"
           src="/profile.jpg"
           alt="profile"
           loading="eager"
@@ -32,7 +33,7 @@ function ProfileSection() {
         <div className="border-t">
           <h1 className="pl-4 py-0.5 font-semibold  select-none text-2xl flex items-center font-mono">
             {ABOUT.name}&nbsp;
-            <VerifiedFilledIcon />
+            <BadgeCheck color="#2db6f0" />
           </h1>
         </div>
         <div className="h-9 border-t flex items-center justify-start  py-1 pl-4  md:h-auto">

@@ -1,5 +1,5 @@
 import FlickeringGrid from "@/components/section/top/flickering-grid";
-import PixelTypedAnimation from "@/components/animation/pixel-typed";
+import PixelTypedAnimation from "@/components/section/top/pixel-typed";
 
 function TopSection() {
   return (

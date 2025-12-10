@@ -27,6 +27,7 @@ const about = {
     linkedin: "https://www.linkedin.com/in/saimum27/",
     medium: "https://saimumislam27.medium.com/",
     github: "https://github.com/Saimumislam",
+    researchgate: "https://www.researchgate.net/profile/Saimum-Islam",
   },
   skills: [
     {

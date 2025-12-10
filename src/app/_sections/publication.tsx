@@ -1,6 +1,7 @@
 "use client";
+
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Layers2 } from "lucide-react";
 
 import {
   Accordion,
@@ -9,17 +10,15 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 
-import { DiscountIcon, CoinIcon } from "@/components/icons";
-
 import PUBLICATIONS from "@/config/publications";
 
 function PublicationSection() {
   const [openFreelanceItem, setOpenFreelanceItem] = useState("");
   return (
     <section className="border-x full-line-bottom relative">
-      <div className="px-4 py-2   ">
-        <h3 className="text-primary font-medium ">Publications</h3>
-      </div>
+      <h2 className="pl-4 text-2xl font-semibold relative full-line-bottom ">
+        Publications
+      </h2>
       <div className=" full-line-bottom relative ">
         {PUBLICATIONS.map((publication, index) => (
           <div key={index} className="relative pl-10">
@@ -32,7 +31,7 @@ function PublicationSection() {
                 className="flex size-6 shrink-0 items-center justify-center rounded-md bg-muted text-muted-foreground  "
                 aria-hidden="true"
               >
-                <CoinIcon className="size-4" />
+                <Layers2 className="size-4" />
               </div>
             </div>
 

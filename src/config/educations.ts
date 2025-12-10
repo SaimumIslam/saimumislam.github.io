@@ -14,7 +14,7 @@ const education = [
   {
     duration: "2013 - 2015",
     institution: "Kalaroa Govt College",
-    description: "Completed Class 11 to 12 atKalaroa Govt College.",
+    description: "Completed Class 11 to 12 at Kalaroa Govt College.",
     points: [
       "Classes attended: 11th and 12th",
       "Government board education system",
