@@ -36,13 +36,13 @@ const AnimatedLogo = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("relative font-bold", containerClassName)}>
+    <div className={cn("relative font-bold px-6 md:px-0", containerClassName)}>
       <motion.h1
         initial={draw ? "hidden" : undefined}
         animate={draw ? "visible" : undefined}
         variants={draw ? textVariants : undefined}
         className={cn(
-          " font-mono text-muted-foreground font-medium",
+          "font-mono text-muted-foreground font-medium",
           sizes[size],
           className
         )}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BadgeCheck } from "lucide-react";
 
 import FlipSentences from "@/components/animation/flip-sentence";
+import DownloadButton from "@/components/animation/download-btn";
 
 import ABOUT from "@/config/about";
 import SITE from "@/config/site";

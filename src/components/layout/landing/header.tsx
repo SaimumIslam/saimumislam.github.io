@@ -1,17 +1,14 @@
 "use client";
 
-import { GithubIcon } from "lucide-react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { buttonVariants } from "@/components/ui/button";
 import DownloadButton from "@/components/animation/download-btn";
-
-import AnimatedLogo from "./logo";
-import HeaderClient from "./header-client";
 
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/useMobile";
+
+import AnimatedLogo from "./logo";
+import HeaderClient from "./header-client";
 
 const LOGO_WRAPPER_VARIANTS = {
   center: {
@@ -84,7 +81,6 @@ const Header: React.FC<HeaderProps> = ({ transition }) => {
           >
             <AnimatedLogo size={isMobile ? "lg" : "sm"} draw />
           </motion.div>
-
           <motion.div
             initial={{
               top: isMobile ? 12 : 7.5,

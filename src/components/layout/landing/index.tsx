@@ -43,7 +43,7 @@ function LandingAnimation({
       <main
         className={cn(
           isLoaded
-            ? "h-dvh max-w-full overflow-x-hidden sm:overflow-x-visible relative w-full mx-auto md:max-w-3xl pt-12 px-2 md:px-0"
+            ? "h-dvh max-w-full overflow-x-hidden sm:overflow-x-visible relative w-full mx-auto md:max-w-3xl pt-12 px-4 md:px-0"
             : "h-dvh relative overflow-hidden md:max-w-3xl w-full max-w-full mx-auto pt-12 "
         )}
       >
