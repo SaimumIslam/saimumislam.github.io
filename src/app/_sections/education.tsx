@@ -32,7 +32,6 @@ function EducationSection() {
                 <GraduationCap className="size-4" />
               </div>
             </div>
-            {/* Accordion */}
             <Accordion
               type="single"
               collapsible

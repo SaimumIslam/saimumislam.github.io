@@ -1,0 +1,57 @@
+name: Build Next.js and Deploy to Master
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - master # Don't trigger when master changes
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Required to push to master
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js App
+        run: npm run build
+
+      - name: Prepare output folder
+        run: |
+          rm -rf build_output
+          mkdir build_output
+          cp -R .next/* build_output/
+
+      - name: Push .next to master
+        env:
+          GITHUB_USER_NAME: "SaimumIslam"
+          GITHUB_USER_EMAIL: "saimumislam27@gmail.com"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Configure Git
+          git config --global user.name "$GITHUB_USER_NAME"
+          git config --global user.email "$GITHUB_USER_EMAIL"
+
+          # Switch to master branch
+          git fetch origin master
+          git checkout master
+
+          # Remove previous build and copy new build
+          rm -rf .next
+          mkdir .next
+          cp -R ./build_output/* .next/
+
+          # Commit and push only if changes exist
+          git add .next
+          if ! git diff --cached --quiet; then
+            git commit -m "Deploy .next from branch $GITHUB_REF"
+            git push https://x-access-token:$GITHUB_TOKEN@github.com/${{ github.repository }} master
+          else
+            echo "No changes to deploy."
+          fi
